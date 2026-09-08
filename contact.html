@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — GTS-S.A.</title>
+<meta name="description" content="Contactez GTS-S.A. pour toute question sur nos trajets, nos services de fret ou nos partenariats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="mark"><img src="images/logo-gts.jpeg" alt="Logo GTS-S.A."></span>
+      GTS-S.A.
+    </a>
+    <nav>
+      <ul>
+        <li><a href="presentation.html" class="">Présentation</a></li>
+        <li><a href="activites.html" class="">Activités</a></li>
+        <li><a href="actualites.html" class="">Actualités</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="kicker">Contact</p>
+      <h1>Parlons de votre trajet ou de votre envoi</h1>
+      <p>Notre équipe vous répond pour toute question sur les horaires, le fret ou les partenariats.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <dl class="contact-list">
+            <div class="row">
+              <dt>Adresse</dt>
+              <dd>10558  Sonadis,Rufisque, Dakar, Sénégal</dd>
+            </div>
+            <div class="row">
+              <dt>Téléphone</dt>
+              <dd>+221 33 889 19 00</dd>
+            </div>
+            <div class="row">
+              <dt>E-mail</dt>
+              <dd>contact@gts-sa.sn</dd>
+            </div>
+            <div class="row">
+              <dt>Site</dt>
+              <dd>gts-sa.sn</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field" data-field="name">
+            <label for="name">Nom complet</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" autocomplete="name">
+            <p class="error-text">Merci d'indiquer votre nom.</p>
+          </div>
+
+          <div class="field" data-field="email">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="vous@exemple.com" autocomplete="email">
+            <p class="error-text">Merci d'indiquer une adresse e-mail valide.</p>
+          </div>
+
+          <div class="field" data-field="message">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message"></textarea>
+            <p class="error-text">Merci de rédiger votre message.</p>
+          </div>
+
+          <!-- Champ piège anti-spam (honeypot), laissé vide par les visiteurs humains -->
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <label for="website">Ne pas remplir</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" id="submitBtn">Envoyer le message</button>
+          <div class="form-msg" id="formMsg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<div id="site-footer"></div>
+
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
