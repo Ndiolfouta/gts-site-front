@@ -1,10 +1,10 @@
 :root{
-  /* Palette inspirée du logo : verts naturels + accents dorés */
-  --green-deep:#1E5B33;
+  /* Palette officielle GTS-S.A. : dérivée du vert du bouton "Nous contacter" (#4CA85B) */
+  --green-deep:#235C31;
   --green:#4CA85B;
-  --green-mid:#6FBF73;
-  --green-light:#B7E2A8;
-  --green-pale:#E7F5E1;
+  --green-mid:#6FBF7E;
+  --green-light:#B4E0BC;
+  --green-pale:#E9F6EB;
   --gold:#F2B33D;
   --gold-deep:#D9611F;
   --navy:#1B3A4E;
@@ -13,8 +13,8 @@
   --ink:#151A21;
   --grey:#66756B;
   --line:#DCEEDA;
-  --shadow: 0 8px 30px rgba(30,91,51,0.10);
-  --shadow-lg: 0 20px 60px rgba(30,91,51,0.18);
+  --shadow: 0 8px 30px rgba(35,92,49,0.10);
+  --shadow-lg: 0 20px 60px rgba(35,92,49,0.18);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -32,7 +32,7 @@ img{max-width:100%;display:block;}
 a:focus-visible, button:focus-visible{outline:2px solid var(--green);outline-offset:3px;}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:50;background:rgba(150, 226, 196, 0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+header{position:sticky;top:0;z-index:50;background:rgba(51, 244, 131, 0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1180px;margin:0 auto;}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--navy);}
 .brand .mark{width:42px;height:42px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 2px 10px rgba(30,91,51,0.25);border:2px solid var(--green-pale);}
@@ -127,7 +127,7 @@ section{padding:88px 0;}
 
 /* ACTIVITES */
 .activities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.activity{background:#e3eae8;border:1px solid var(--line);border-radius:18px;padding:34px 28px;transition:box-shadow .2s, transform .2s, border-color .2s;}
+.activity{background:rgba(51, 244, 131, 0.92);border:1px solid var(--line);border-radius:18px;padding:34px 28px;transition:box-shadow .2s, transform .2s, border-color .2s;}
 .activity:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--green-mid);}
 .activity .num{color:var(--gold-deep);font-weight:800;font-size:14px;margin-bottom:20px;}
 .activity h3{font-size:21px;color:var(--navy);margin-bottom:12px;}
@@ -156,9 +156,10 @@ section{padding:88px 0;}
 
 /* ACTUALITES */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.news-card{background:#c1e9c9;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:box-shadow .2s, transform .2s;}
+.news-card{background:rgba(51, 244, 131, 0.92);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:box-shadow .2s, transform .2s;}
 .news-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
-.news-card .img-frame{aspect-ratio:16/10;border-radius:0;box-shadow:none;margin-bottom:0;}
+.news-card .img-frame{aspect-ratio:16/10;border-radius:0;box-shadow:none;margin-bottom:0;background:var(--paper-soft);}
+.news-card .img-frame img{object-fit:contain;object-position:center;}
 .news-card-body{padding:22px 24px 26px;}
 .news-date{font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
 .news-card h3{font-size:17.5px;color:var(--navy);margin-bottom:10px;line-height:1.35;}
