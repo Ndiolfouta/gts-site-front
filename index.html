@@ -55,28 +55,40 @@
     </div>
   </section>
 
-  <!-- DEPARTURE BOARD / STATS -->
+ <!-- DEPARTURE BOARD / STATS -->
   <div class="board">
     <div class="wrap">
       <div class="board-item">
-        <div class="board-num">2020</div>
+        <div class="board-num" data-target="2020"></div>
         <div class="board-label">Création de GTS-S.A., née de la transformation du PTB</div>
       </div>
       <div class="board-item">
-        <div class="board-num">205</div>
+        <div class="board-num" data-target="205"></div>
         <div class="board-label">Agents mobilisés au service du réseau ferroviaire national</div>
       </div>
       <div class="board-item">
-        <div class="board-num">1,8 Md</div>
-        <div class="board-label">FCFA de capital, entièrement souscrit par l'État du Sénégal</div>
-      </div>
-      <div class="board-item">
-        <div class="board-num">100%</div>
+        <div class="board-num" data-target="100" data-suffix="%"></div>
         <div class="board-label">Public — entreprise du secteur parapublic régie par l'OHADA</div>
       </div>
     </div>
   </div>
 
+  <script>
+    document.querySelectorAll('.board-num[data-target]').forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 1800;
+      var start = performance.now();
+
+      function step(now) {
+        var progress = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 2);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  </script>
   <!-- APERÇU ACTIVITES -->
   <section id="activites-preview">
     <div class="wrap">
@@ -99,7 +111,7 @@
        
       </div>
       <div style="margin-top:36px;">
-        <a href="activites.html" class="btn-secondary">Voir le détail de nos activités</a>
+        <a href="activites.html" class="btn-secondary">Voir les détail de nos activités</a>
       </div>
     </div>
   </section>
